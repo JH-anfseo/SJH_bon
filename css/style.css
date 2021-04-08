@@ -1,0 +1,173 @@
+@charset "uft-8";
+@import url('https://fonts.googleapis.com/css?family=Crimson+Text:400,400i,600,600i,700,700i|Noto+Sans+KR:100,300,400,500,700,900&subset=korean');
+/*
+font-family: 'Noto Sans KR', sans-serif;
+font-family: 'Crimson Text', serif;*/
+div, ul, li,h1, h2, h3, h4, img ,header ,main, footer {margin: 0; padding: 0; box-sizing: border-box;}
+body {margin: 0; padding: 0; }
+li ,ol ,ul {list-style: none;}
+a {text-decoration: none;}
+img {vertical-align: middle;}
+
+/*메뉴*/
+header {width: 100%; min-width: 1400px; height: 98px; position: fixed; font: 16px 'Noto Sans KR', sans-serif; font-weight: 500; border-bottom: 1px solid rgba(255,255,255,0.2); z-index: 999; background: rgba(110, 0, 0,0.8); transition: all 0.5s;}
+
+header .header_img{position: absolute; left: 200px; top: 50%; transform: translateY(-50%)}
+.gnb { width: 100%; height: 100%; margin: 0 0 0 30px; text-align: center;}
+.gnb .gnb_in { position: absolute; top: 50%; right: 500px; transform: translateY(-50%);}
+.gnb > .gnb_in > li  { height: 100%; float: left;  margin: 0 15px; }
+.gnb  li > a { color: #fff; text-align: center; display: block; padding: 35px 0;}
+.header_bttm {width:100%; position: absolute; left: 0;  bottom: -55px;  padding: 0; text-align: center; margin: 0 auto; height: 55px; display: none;}
+.bonif {width: 600px; margin: 0 auto;}
+.bonif li{float: left; width: 130px; margin: 5px;}
+.bonif li a{padding:10px 0;}
+.nb {text-align: center; width: 250px;  height: 98px; position: absolute; right: 200px;}
+.nb li { color: #efefef; display: inline-block; margin: 38px 0;font-size: 13px;}
+.nb li:after {content: ''; border-right: 1px solid #fff; margin: 0 5px; display: inline-block; height: 10px;}
+.nb li:nth-child(3):after, .nb li:nth-child(4):after {border: none;}
+.nb li:nth-child(4) {border: 1px solid #fff; width: 50px; height: 50px; padding: 0;  vertical-align: middle; margin: 0;}
+.nb li:nth-child(3) {border: none;}
+.nb li:nth-child(4) img{width: 100%;padding-top: 2px;}
+
+
+/*메인슬라이드*/
+#mainheader {width: 100%; height: 100%; margin: 0; padding: 0; position: relative; overflow: hidden;}
+#mainheader .slidetext {height: 780px; position: relative;}
+#mainheader .slidetext li {position: absolute; top: 0; left: 0; width: 100%; height: 100%; transition: all 0.2s;}
+#mainheader .slidetext li:nth-child(1) {background: url(../mainimg/bnr_201903271517082dD.jpg) center/ cover;}
+#mainheader .slidetext li:nth-child(2) {background: url(../mainimg/bnr_20190430081755R2m.jpg)center/ cover;}
+#mainheader .slidetext li:nth-child(3) {background: url(../mainimg/bnr_20190327143839eJY.jpg)center/ cover;}
+#mainheader .slidetext li:nth-child(4) {background: url(../mainimg/bnr_20190329085732KRt.jpg) center/ cover;}
+#mainheader .slidetext li h3 {position: absolute; top: 35%; color: #fff; left: 50%; transform: translate(-50%,0)}
+#mainheader .slidetext li h1 {position: absolute; top: 45%; color: #fff; left: 50%; transform: translate(-50%,0)}
+#mainheader .slidetext li p {text-align: center;  margin: 0; display: block;  position: absolute; bottom: 150px; left: 50%; transform: translateX(-50%);}
+#mainheader .slidetext li p a{color: #eee; border: 2px solid #eee; padding: 15px 40px;}
+#mainheader ul.indicator {position: absolute; left: 0; bottom: 80px; width: 100%; text-align: center;}
+#mainheader .indicator li {display: inline-block;}
+#mainheader .indicator li a {display: block; width: 50px; height: 5px; background: rgb(183, 183, 183,0.7); overflow: hidden; text-indent: -999px;}
+#mainheader .indicator li.on a{background: #fff}
+
+/*주문하기*/
+#mmenu {width: 1100px; height: auto; margin: 0 auto; position: relative; font-family: 'Noto Sans '}
+#mmenu .minimenu {width: 380px; background: url(../mainimg/main_arrow.png)no-repeat right 10px center,  #6e0000; display: inline-block; height: 80px; position: absolute; bottom: -40px; margin-right: 50px;  margin: 0 auto; display: block; cursor: pointer; border-right: 1px solid rgba(255,255,255,0.4);}
+#mmenu .minimenu:nth-child(2) {left: 380px;}
+#mmenu .minimenu:nth-child(3) {left: 760px;}
+.minimenu h4{ font-size: 20px; color: #fff; padding: 25px 15px ; display: inline-block;}
+.minimenu .minitext{ font: 15px 'Noto Sans'; font-weight: 400; display: inline-block; color: #c6a8a8;}
+
+/*글자 공통*/
+.stitle, .btitle {text-align: center; display: block; }
+.btitle {margin-bottom: 30px; font: 44px 'Noto Sans KR', sans-serif;; font-weight: 500;}
+.stitle{padding-top: 30px; color: #8f172b; font: 24px 'Crimson Text'; font-style: italic;}
+
+/*메뉴*/
+#menutitle {padding: 0; margin: 50px 0 0; width: 100%; height: 1700px; font-family: 'Noto Sans KR', sans-serif; overflow: hidden;}
+#menutitle .foodmenu {position: relative;}
+#menutitle article {width: 0; height: 300px; position: absolute; background: #f2f2f2; margin: 0 auto; transition: all 1s; }
+#menutitle article.show {width: 1400px;}
+#menutitle article img{position: absolute; top: -30px;}
+#menutitle article:nth-child(3) img{position: absolute; top: -70px;}
+#menutitle article .text02 {display: inline-block; width: 30%; height: 100%; margin: 30px 0 0; padding: 0; position: relative;}
+article .text02 h3 {color: #6e0000; font-size: 16px ; font-weight: 600;}
+article .text02 h2 {color: #111; font-size: 30px ; font-weight: 500; width: 65%;}
+article:nth-child(3) .text02 h2 {width: 85%;}
+article .text02 p {color: #555; font: 15px 'Noto Sans KR', sans-serif; font-weight: 600; padding: 10px 0;}
+article .text02 p:before {content: ''; display: block;width: 25px; border-top: 2px solid #000; margin-bottom: 20px;}
+#menutitle article:nth-child(1) {top: 50px; right: 0;}
+#menutitle article:nth-child(1) .text02 {position: absolute; left: 50%;}
+#menutitle article:nth-child(2) {top: 550px; left: 0; position: relative; margin: 0;}
+#menutitle article:nth-child(2) img{ right: 0; position: absolute;}
+#menutitle article:nth-child(2) .text02 {position: absolute; right: 50%;}
+#menutitle article:nth-child(3) {top: 1050px; right: 0;}
+#menutitle article:nth-child(3) .text02 {position: absolute; left: 55%;}
+#menutitle article .btn01 {position: absolute; bottom: 10px; background: #6e0000; padding: 15px 40px; color: #fff; font-weight: 600;}
+
+/*창업*/
+#start {width: 100%; height: 800px; margin: 0; padding: 0; background: url(../mainimg/bg_main_vod.jpg)no-repeat center / cover; color: #fff; text-align: center; font-family: 'Noto Sans KR', sans-serif; position: relative;}
+#start .stitle {color: #299620; padding-top: 50px;}
+#start .start_in {position: relative; height: 400px; margin: 0 auto; width: 100%; height: 100%; overflow: hidden;}
+#start .bonstart {position: absolute; width: 100%; height: 100%; top: 0; left: 0;}
+#start .bonstart li {position: absolute; left: 0; top: 0; width: 100%;}
+#start .arrow_control a{font-size: 20px; color: #fff;}
+#start .arrow_control a.prev:after{content: ''; display: inline-block; width: 150px; height: 1px; border: 1px solid #fff; background: #fff; margin: 0 0 5px 10px;}
+#start .arrow_control a.next:before{content: ''; display: inline-block; width: 150px; height: 1px; border: 1px solid #fff; background: #fff; margin: 0 10px 5px 0;}
+#start .arrow_control a.prev{position: absolute; top: 25%; left: 200px; }
+#start .arrow_control a.next{position: absolute; top: 25%; right: 200px; }
+.start_txt{position: absolute; bottom: 100px; left: 50%; transform: translateX(-50%); color: #eee; text-align: center;}
+.start_txt li {display: none;}
+.start_txt li h2{font-size: 24px; font-weight: 600; padding: 10px 0; }
+.start_txt li h3{font-size: 16px; font-weight: 400; line-height: 10px; margin: 10px 0 30px;}
+.start_txt li a{padding: 10px 25px; color: #fff; background: #87af0f; margin-top: 20px;}
+.start_txt li.on {display: block;}
+
+/*추천메뉴*/
+#nmenu {margin-top: 20px; width: 100%; height: 100%;font-family: 'Noto Sans KR', sans-serif; }
+#nmenu .nmenu_in{height: 600px; min-width: 1500px;  position: relative; overflow-x: hidden;}
+#nmenu article {height: 400px;  background: #f2f2f2; position: relative;}
+#nmenu article .text04 {position: absolute; left: 150px; margin-top: 50px;}
+#nmenu article .text04 h2 {color: #111; font-size: 30px ; font-weight: 500;}
+#nmenu article .text04 h3 {color: #6e0000; font-size: 16px ; font-weight: 600;}
+#nmenu article .btn02 {background: #6e0000; padding: 15px 50px; color: #fff; font-weight: 600; display: inline-block; margin-top: 20px;}
+#nmenu article p {margin: 5px 0; font-weight: 400;}
+#nmenu .nmenu_in ul {position: absolute; bottom: -30px; left: 150px;}
+#nmenu .nmenu_in ul li{float: left; margin-right: 15px; border: inset 5px #8b0505;}
+#nmenu .nmenupic {width: 55%; margin: 0; padding: 0; position: absolute; top: 0; right: 0;}
+#nmenu .nmenupic img {width: 100%; position: absolute; right: -70px}
+
+/*비전*/
+#vision {width: 100%; height: 350px; background: url(../mainimg/bg_main_vision.jpg)no-repeat; position: relative; margin-top: 200px; background-attachment: fixed; font-family: 'Noto Sans KR', sans-serif; }
+#vision .stitle {color:#fff; margin-top: 20px }
+#vision .bonstory {padding-top: 20px; color: #fff;}
+#vision .bonstory h2 {width: 600px; padding: 40px 20px; background: #87af0f; font-size: 26px; position: absolute; bottom: -70px; left: 50%; transform: translateX(-50%); font-weight: 300; text-align: center;}
+#vision .bonstory h2 span {font-weight: bold;}
+
+/*공지사항*/
+#news {width: 100%; margin: 0 auto; overflow: hidden; padding-top: 150px; background: #f4f4f4; font-family: 'Noto Sans KR', sans-serif;}
+#news article {width: 30%; float: left; background: #fdfdfd; height: 200px; margin: 0 15px; transition: all 0.3s;}
+#news article h3{font-size: 27px; font-weight: 500; padding: 10px 20px; border-bottom: 1px solid #cbcbcb; position: relative; }
+#news article h3 i{font-size: 22px; display: inline-block; padding: 5px 10px; color: #6e0000; cursor: pointer; position: absolute; right: 10px; bottom: 5px}
+#news article h4{margin: 20px 20px 10px; width: 85%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap }
+#news article h4 a{font-size: 20px; font-weight: 400;  text-align: center; color: #555;}
+#news article time{font-size: 15px; color: #888; margin: 20px 25px 10px; ;}
+#news .newsmenu{margin: 0 auto; width: 1100px; height: 250px;}
+
+/*aside*/
+.aside_menu {position: fixed; top: 50%; right: 0; transform: translateY(-50%); transition: all 0.5s; margin: 0; padding: 0; opacity: 0;}
+.aside_menu ul {width: 70px; background: #222;}
+.aside_menu ul li{height: 70px; border-bottom: 1px solid #fff; position: relative; overflow: hidden; transition: all 0.3s;}
+.aside_menu ul li img {transition: all 0.3s;}
+.aside_menu ul li span{opacity: 0; transition: all 0.3s; color: #fff; font-size: 14px; display: block; width: 100%; padding: 25px 0; text-align: center; font-weight: 600;}
+.aside_menu ul li:nth-child(1) img{position: absolute; left: -65px; bottom: -5px; }
+.aside_menu ul li:nth-child(2) img{position: absolute; left: -65px; top: -65px; }
+.aside_menu ul li:nth-child(3) img{position: absolute; left: -65px; top: -135px; }
+.aside_menu ul li:nth-child(4) img{position: absolute; left: -65px; bottom: -70px; }
+.aside_menu ul li:nth-child(5) img{position: absolute; left: -65px; top: -200px; }
+.aside_menu ul li:hover{background: #6e0000;}
+.aside_menu ul li:hover img{left: 0;}
+.aside_menu ul li:hover span{opacity: 1; }
+
+/*footer*/
+footer {width: 100%; height: 100%; margin: 0; padding: 0; background: #343434; font-size: 15px;}
+.footericonb {width: 1200px; height: 50px; margin: 0 auto; overflow: hidden;}
+.footericonbb {border-bottom: 1px solid #868686; display: block;}
+.footericonb .footericon{float: left; width: 33.33%; text-align: center; }
+.footericonb .footericon img{height: 100%}
+.footericonb .footerid{display: inline-block; padding: 0 10px 0 5px; margin-right: 15px; border-right: 1px solid #868686; color: #868686;}
+.footericon .call {text-align: right; display: inline-block; padding-left: 10px;}
+footer .sns {width: 400px; height: 100px; margin: 0 auto;}
+footer .sns li {background: url(../mainimg/ico_sns.png); background-size: 45px; background-position: center top; width: 45px; height: 45px; float: left; margin-left: 30px; margin-top: 25px;}
+footer .sns li:nth-child(2) {background-position: center top -50px; }
+footer .sns li:nth-child(3) {background-position: center top -100px;}
+footer .sns li:nth-child(4) {background-position: center top -150px;}
+footer .footerstory {width: 1100px; height: 100%; margin: 0 auto; text-align: center; color: #868686;}
+footer .footers {width: 700px; margin: 0 auto; overflow: hidden;}
+footer .copy {margin: 0 0 10px; float: left; width: 75px; font-size: 14px; border-right: 1px solid #a0a0a0; padding:0 5px;}
+footer .copy:nth-child(2) {width: 120px;}
+footer .copy:nth-child(3) {width: 135px;}
+footer .copy:nth-child(5) {width: 100px;}
+footer .copyw {color: #fff;}
+footer .foocopy {font-size: 14px;}
+footer .copyright {color: #555;}
+
+
+
